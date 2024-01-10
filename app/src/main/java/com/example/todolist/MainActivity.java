@@ -1,4 +1,7 @@
 package com.example.todolist;
+/*
+ * @author Chris Yang Li
+ */
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,6 +27,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+
+
 
 public class MainActivity extends AppCompatActivity {
     private ArrayList<String> items;
