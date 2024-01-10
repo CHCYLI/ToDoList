@@ -63,8 +63,6 @@ public class MainActivity extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 Context context = getApplicationContext();
                 Toast.makeText(context, "Items Removed", Toast.LENGTH_LONG).show();
-                Log.d("Checking", "Results: " + position);
-                Log.d("Length", "Results: " + items.size());
                 itemName = items.get(position);
                 items.remove(position);
                 itemsAdapter.notifyDataSetChanged();
@@ -72,11 +70,8 @@ public class MainActivity extends AppCompatActivity {
                 FileOutputStream fos = null;
                 FileInputStream fis = null;
                 try {
-                    Toast.makeText(context, "Hello", Toast.LENGTH_LONG).show();
                     fis = getApplicationContext().openFileInput(FILE_NAME);
-                    Toast.makeText(context, "World", Toast.LENGTH_LONG).show();
                     fos = getApplicationContext().openFileOutput(TEMP_NAME, Context.MODE_PRIVATE);
-                    Toast.makeText(context, "!", Toast.LENGTH_LONG).show();
 
                     int ch;
                     int commaCount = 0;
@@ -114,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 }
-                Log.d("End", "Results: ");
                 return true;
             }
         });
